@@ -22,10 +22,11 @@ export default function App({ ready }) {
             blur={[400, 100]}
             resolution={1024}
             mixBlur={1}
-            opacity={2}
-            depthScale={1.1}
-            minDepthThreshold={0.4}
-            maxDepthThreshold={1.25}
+            mixStrength={15}
+            depthScale={1}
+            minDepthThreshold={0.85}
+            color="#151515"
+            metalness={0.6}
             roughness={1}
           />
         </mesh>
