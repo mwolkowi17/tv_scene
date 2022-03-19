@@ -63,7 +63,7 @@ function Tv({ ready, ...props }) {
   const group = useRef()
   const { nodes } = useGLTF('/tv-transformed.glb')
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/drei.mp4', crossOrigin: 'Anonymous', loop: true }))
-  useEffect(() => void (ready && video.play()), [ready, video])
+  useEffect(() => void (video.play()), [video])
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes.body.geometry} material={nodes.body.material} />
